@@ -1,4 +1,4 @@
 tensorflow
-flask
-opencv-python
+Flask
+opencv-python-headless
 numpy
