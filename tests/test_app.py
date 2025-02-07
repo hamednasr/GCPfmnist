@@ -1,5 +1,6 @@
 import pytest
 import json
+import io
 from fmnist_flask import app 
 
 @pytest.fixture
