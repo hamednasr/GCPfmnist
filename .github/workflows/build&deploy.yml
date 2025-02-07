@@ -34,8 +34,8 @@ jobs:
           pip install pytest
 
       - name: Run tests
-          run:|
-            PYTHONPATH=$(pwd) pytest tests/
+        run: |
+          PYTHONPATH=$(pwd) pytest tests/
 
   build-and-deploy:
     runs-on: ubuntu-latest
