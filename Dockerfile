@@ -16,7 +16,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port for Flask
-EXPOSE 8080
+EXPOSE 8083
 
 # Command to run the Flask app (inside the package)
 CMD ["python", "-m", "fmnist_flask"]
