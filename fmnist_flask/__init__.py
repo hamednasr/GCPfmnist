@@ -5,7 +5,7 @@ import flask
 from flask import Flask, request, jsonify
 
 # Load the trained model
-model = tf.keras.models.load_model("fmnist.h5")
+model = tf.keras.models.load_model("/app/fmnist.h5")
 
 # Class labels
 classes = {
@@ -40,7 +40,7 @@ def predict():
         return jsonify({"error": "No file uploaded"}), 400
 
     file = request.files['file']
-    image_path = "/tmp/uploaded_image.png"  # Temporary file
+    image_path = "./uploaded_image.png"  # Temporary file
     file.save(image_path)
 
     image = preprocess_image(image_path)
