@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y libgl1 libglib2.0-0
 
 # Copy the application files
-COPY fmnist_flask.py .  
+COPY fmnist_flask/__init__.py .  
 COPY fmnist.h5 . 
 COPY requirements.txt .
 
