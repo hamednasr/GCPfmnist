@@ -34,7 +34,8 @@ jobs:
           pip install pytest
 
       - name: Run tests
-        run: pytest tests/  # Make sure your tests are inside a 'tests' folder
+          run:|
+            PYTHONPATH=$(pwd) pytest tests/
 
   build-and-deploy:
     runs-on: ubuntu-latest
